@@ -14,7 +14,7 @@ describe Task do
     end
     
     context "requires one argument" do
-      Then {expect{Task.new}.to raise_error(ArgumentError)} # noticed we used {Task.new} instead of (Task.new)? With () is to test the return value, {} is to test the behavior
+      Then {expect{Task.new}.to raise_error(ArgumentError)} # notice we used {Task.new} instead of (Task.new)? With () is to test the return value, {} is to test the behavior
     end
   end
   
@@ -37,7 +37,7 @@ describe Task do
   
   describe "#complete!" do
     context "changes the task from incomplete to completed" do
-      Then {task.complete? == false}
+      # Then {task.complete? == false}
       When {task.complete!}
       Then {task.complete? == true}
     end
